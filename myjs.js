@@ -1,4 +1,5 @@
 var provider = new firebase.auth.GoogleAuthProvider();
+var user;
 
 function signIn(){
     firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -6,7 +7,9 @@ function signIn(){
     var token = result.credential.accessToken;
     // The signed-in user info.
     var user = result.user;
-    console.log(user.val());
+    showContainer();
+
+    
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -17,4 +20,11 @@ function signIn(){
     var credential = error.credential;
     // ...
 });
+}
+
+function showContainer(){
+    $("#login").hide();
+    $("#profile").show();
+    $("#name").html(user.displayName);
+    $("#email").html(user.email);
 }
