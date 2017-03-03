@@ -12,3 +12,22 @@
 	top: -1000px;
 }
 
+#navbar{
+	background-color:#4d79ff;
+	width:140%;
+}
+
+#icon{
+	height: 35px;
+}
+
+#home{
+	color:white;
+}
+
+#loginPage{
+	background-color: #f2f2f2
+;
+	height:600px;
+	width:100%;
+}
