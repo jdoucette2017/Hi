@@ -18,11 +18,6 @@ function signIn(){
     var credential = error.credential;
     // ...
   });
-  if(user.length > 0){
-      window.location.href="index2.html"
-  }else{
-      window.location.href="index.html"
-  };
 };
 
 function showContainer(){
