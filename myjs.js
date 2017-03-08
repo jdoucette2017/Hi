@@ -7,7 +7,6 @@ function signIn(){
     var token = result.credential.accessToken;
     // The signed-in user info.
     var user = result.user;
-   
 
   }).catch(function(error) {
     // Handle Errors here.
@@ -18,10 +17,13 @@ function signIn(){
     // The firebase.auth.AuthCredential type that was used.
     var credential = error.credential;
     // ...
-     window.location.href="index2.html"
   });
-  
-}
+  if(user.length > 0){
+      window.location.href="index2.html"
+  }else{
+      window.location.href="index.html"
+  };
+};
 
 function showContainer(){
     $("#login").hide();
