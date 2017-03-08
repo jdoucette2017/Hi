@@ -19,7 +19,8 @@ function signIn(){
     // The firebase.auth.AuthCredential type that was used.
     var credential = error.credential;
     // ...
-});
+  });
+  window.location.href="index2.html"
 }
 
 function showContainer(){

@@ -21,13 +21,18 @@
 	height: 35px;
 }
 
-#home{
+#NavText{
 	color:white;
+	margin:5px;
 }
 
 #loginPage{
-	background-color: #f2f2f2
-;
+	background-color: #f2f2f2;
 	height:600px;
 	width:100%;
+}
+
+#button{
+	color:white;
+	background-color: #4d79ff;
 }
