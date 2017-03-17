@@ -7,6 +7,7 @@ function signIn(){
     var token = result.credential.accessToken;
     // The signed-in user info.
     var user = result.user;
+    showWelcomeContainer();
 
   }).catch(function(error) {
     // Handle Errors here.
