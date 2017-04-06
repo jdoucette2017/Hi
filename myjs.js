@@ -28,7 +28,7 @@ function signIn(){
 };
 
 function showContainer(){
-    $("#loginpage").hide();
+    $("#loginPage").hide();
     $("#profile").show();
     $("#name").html(user.displayName);
     $("#email").html(user.email);
