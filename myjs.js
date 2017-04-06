@@ -2,7 +2,7 @@ var provider = new firebase.auth.GoogleAuthProvider();
 var user;
 
 $( document ).ready(function() {
-	$("#welcome").hide();
+	$("#profile").show();
 	$(".upload-group").hide();
 	document.getElementById("upload").addEventListener('change', handleFileSelect, false);
 });
