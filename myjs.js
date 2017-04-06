@@ -28,8 +28,7 @@ function signIn(){
 };
 
 function showContainer(){
-    $("#loginPage").hide();
-    $("#profile").show();
+    document.getElementById( 'profile' ).scrollIntoView();;
     $("#name").html(user.displayName);
     $("#email").html(user.email);
 }
