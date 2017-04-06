@@ -1,6 +1,12 @@
 var provider = new firebase.auth.GoogleAuthProvider();
 var user;
 
+$( document ).ready(function() {
+	$("#welcome").hide();
+	$(".upload-group").hide();
+	document.getElementById("upload").addEventListener('change', handleFileSelect, false);
+});
+
 function signIn(){
     firebase.auth().signInWithPopup(provider).then(function(result) {
     // This gives you a Google Access Token. You can use it to access the Google API.
@@ -22,7 +28,7 @@ function signIn(){
 };
 
 function showContainer(){
-    $("#login").hide();
+    $("#loginpage").hide();
     $("#profile").show();
     $("#name").html(user.displayName);
     $("#email").html(user.email);
