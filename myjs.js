@@ -7,8 +7,7 @@ function signIn(){
     var token = result.credential.accessToken;
     // The signed-in user info.
     var user = result.user;
-    showWelcomeContainer();
-
+    
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -19,10 +18,12 @@ function signIn(){
     var credential = error.credential;
     // ...
   });
+  
 };
 
 function showContainer(){
-    document.getElementById( 'profile' ).scrollIntoView();;
+    $("#login").hide();
+    $("#profile").show();
     $("#name").html(user.displayName);
     $("#email").html(user.email);
-}
+};
